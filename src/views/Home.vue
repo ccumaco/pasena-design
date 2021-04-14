@@ -9,10 +9,31 @@
         :key="i"
         :src="item.src"
       >
-        <div class="text-on-image">
+        <div v-if="i != 2" class="text-on-image">
           <v-img v-if="item.textTitleimg" width="200px" class="mb-4" :src="item.textTitleimg" />
           <h3 v-else :style="'color:' + item.colorText">{{item.textTitle}}</h3>
           <p :style="'color:' + item.colorText">{{ item.textDescription }}</p>
+        </div>
+        <div v-else class="img-medals">
+            <v-img  width="200px" class="mb-4" :src="item.nameImg" /> <br>
+            <v-img  contain height="200px" class="mb-4 medallas" :src="item.medalls2" />
+            <v-img  contain height="200px" class="mb-4 medallas" :src="item.medalls1" />
+            <div class="medallas-texto pb-12">
+              <h3>Monde Selection International Quality Institute</h3>
+              <p>5 Grand Gold Medals, 69 Gold Medals, 26 Silver Medals, 3 Bronze Medals.</p>
+            </div>
+            <div class="medallas">
+              <v-img contain height="200px" class="mt-6 medallas" :src="item.world" />
+              <div class="medallas-texto2 pb-12">
+                <h3>Monde Selection International Quality Institute</h3>
+                <p>5 Grand Gold Medals, 69 Gold Medals, 26 Silver Medals, 3 Bronze Medals.</p>
+              </div>
+              <v-img contain height="200px" class="mt-6 medallas" :src="item.medalls3" />
+              <div class="medallas-texto2 pb-12">
+                <h3>Monde Selection International Quality Institute</h3>
+                <p>5 Grand Gold Medals, 69 Gold Medals, 26 Silver Medals, 3 Bronze Medals.</p>
+              </div>
+            </div>
         </div>
       </v-carousel-item>
     </v-carousel>
@@ -53,6 +74,11 @@ export default {
         {
           name: "foto3",
           src: require("./../assets/glass-of-cold-beer-macro-photography.png"),
+          nameImg: require("./../assets/Nuestracalidad.png"),
+          medalls1: require("./../assets/Frame.png"),
+          medalls2: require("./../assets/Group51.png"),
+          medalls3: require("./../assets/2star_en.png"),
+          world: require("./../assets/logoworldbeer2.png"),
         },
       ],
     };
@@ -100,6 +126,34 @@ export default {
   overflow: hidden;
   .imagen-lateral {
     height: 100%;
+  }
+}
+.img-medals{
+  height: 900px;
+  width: 650px;
+  position: absolute;
+  top: 100PX;
+  right: 50px;
+  z-index: 100;
+  h3{
+    color: #fff;
+  }
+  .medallas{
+    position: relative;
+    display: inline-block;
+  }
+  .medallas-texto{
+    position: relative;
+    // display: inline-block;
+    width: 340px;
+    margin-top: 30px;
+    float: right;
+  }
+  .medallas-texto2{
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    width: 170px;
   }
 }
 .text-on-image {
