@@ -1,9 +1,10 @@
 <template>
   <div class="contenedor-imagen">
-    <v-carousel :show-arrows="false" cycle class="carrusel">
+    <v-carousel :show-arrows="false" class="carrusel">
       <v-carousel-item
         class="imagenes"
         cover
+        width="100%"
         v-for="(item, i) in fotos"
         :key="i"
         :src="item.src"
@@ -42,7 +43,7 @@ export default {
           textTitleimg: require("./../assets/¿Cómo se elabora_.png"),
         },
         {
-          name: "foto1",
+          name: "foto2",
           src: require("./../assets/Foto_manos.png"),         
           textDescription:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras donec ornare odio orci quis at massa. At ornare enim duis maecenas et. Viverra ut ut sed pellentesque. Tincidunt ut tortor consectetur fringilla.",
@@ -50,7 +51,7 @@ export default {
           colorText: '#fff'
         },
         {
-          name: "foto1",
+          name: "foto3",
           src: require("./../assets/glass-of-cold-beer-macro-photography.png"),
         },
       ],
@@ -77,14 +78,14 @@ export default {
     position: absolute;
     width: 53px;
     z-index: 1;
-    right: 0 !important;
+    right: 20px !important;
     .v-item-group{
       button i{
         border-radius: 50%;
-        border: 1px solid #fff;
+        border: 1px solid #000;
         color: transparent;
       }
-      button .v-item--active{
+      button.v-item--active{
         background-color: #fff;
       }
     }

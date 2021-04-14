@@ -28,7 +28,26 @@
         </v-navigation-drawer>
       </div>
       <v-footer >
-        <div class="footer"></div>
+        <div class="footer">
+          <v-row>
+            <v-col cols="5" class="mt-3">
+              <div class="contenedor-lista">
+            <ul>
+              <li>Términos de uso |</li>
+              <li>Políticas de privacidad |</li>
+              <li>Hablemos del alcohol |</li>
+              <li>Contactanos</li>
+            </ul>
+            </div>
+          </v-col>
+          <v-col  cols="3" class="mt-3">
+            <span class="texto-footer"> Anheuser-Busch InBev © 2021 </span>
+          </v-col>
+          <v-col cols="4" class="mt-3">
+            <span class="texto-footer"> TOMAR BEBIDAS ALCOHÓLICAS EN EXCESO ES DAÑINO </span>
+          </v-col>
+          </v-row>
+        </div>
       </v-footer>
     </v-main>
   </v-app>
@@ -72,6 +91,15 @@ $second-color: #fff;
     display: inline-block;
   }
 }
+.contenedor-lista ul li{
+  margin: 0 5px;
+  color: $second-color;
+  display: inline-block;
+}
+.texto-footer{
+  margin-top: 10px;
+  color: $second-color;
+}
 .navegation {
   padding: 105px;
   color: $second-color;
@@ -106,7 +134,7 @@ $second-color: #fff;
 .footer{
   position: absolute;
   bottom: 0;
-  height: 32px;
+  height: 50px;
   background-color: #0f446e;
   z-index: 1000;
   width: 100%;

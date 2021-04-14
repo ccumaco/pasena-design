@@ -5,7 +5,7 @@
       permanent
     >
       <v-list>
-        <v-list-item class="logo-navbar">
+        <v-list-item class="logo-navbar mb-12">
           <v-img cover src="./../assets/Grupo-836.png" alt="" />
         </v-list-item>
         <v-list-item
